@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw; /* Đảm bảo body chiếm toàn bộ chiều rộng màn hình */
+    height: 100vh; /* Đảm bảo body chiếm toàn bộ chiều cao màn hình */
+    background-color: hsl(47, 88%, 63%);
+    font-family: "Figtree", serif;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center;
+}
+
+
+
+.card{
+    background-color: hsl(0, 0%, 100%);
+    width:  380px;
+    padding: 22px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 10px 10px;
+}
+
+.card-img{
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.card-tag{
+    padding: 7px 10px 7px 10px;
+    background-color: hsl(47, 88%, 63%);
+    font-weight: 800;
+    font-size: 15px;
+    width: 85px;
+    border: none;
+    border-radius: 5px;
+    margin: 15px 0 15px 0;
+}
+
+.card-tag p{
+    text-align: center;
+}
+
+.card-published{
+    font-weight: 500;
+    font-size: 15px;
+    color: hsl(0, 0%, 7%);
+}
+
+.card-title{
+    font-weight: 800;
+    font-size: 24px;
+    margin: 15px 0px 15px 0;
+}
+
+.card-description{
+    color: hsl(0, 0%, 42%);
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.card-person{
+    display: flex;
+    align-items: center;
+}
+
+.card-person img{
+    max-width: 100%;
+    height: 32px;
+}
+
+.card-person p{
+    font-weight: 800;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+
+/* màn hình 380px */
+@media (max-width: 375px) {
+    body{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .card{
+        width: 100%;
+        padding: 15px;
+    }
+
+    .card-title{
+        font-size: 20px;
+    }
+
+    .card-description{
+        font-size: 14px;
+    }
+
+    .card-published,
+    .card-tag,
+    .card-person p {
+        font-size: 13px;
+    }
+}
+
+
+/* màn hình lớn 1440px */
+@media (min-width: 1440px) {
+    .card{
+        max-width: 600px;
+        padding: 30px;
+    }
+
+    .card-title{
+        font-size: 28px;
+    }
+
+    .card-description{
+        font-size: 18px;
+    }
+
+    .card-published,
+    .card-tag,
+    .card-person p {
+        font-size: 16px;
+    }
+}
+
